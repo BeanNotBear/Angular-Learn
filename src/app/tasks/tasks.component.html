@@ -1,0 +1,15 @@
+<section id="tasks">
+  <header>
+    <h2>{{ userName }}'s Tasks</h2>
+    <menu>
+      <button>Add Task</button>
+    </menu>
+  </header>
+  <ul>
+    @for (task of getTasksByUserId(); track task.id) {
+      <li>
+        <app-task [task]="task" (complete)="onCompleteTask($event)"></app-task>
+      </li>
+    }
+  </ul>
+</section>
