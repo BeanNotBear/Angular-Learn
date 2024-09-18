@@ -12,7 +12,7 @@ import {TaskService} from "../task/task.service";
 export class NewTaskComponent {
   @Input({required: true}) userId!: string;
   @Output() cancel = new EventEmitter();
-  // test
+
   enteredTitle: string = '';
   enteredSummary: string = '';
   enteredDueDate: string = '';
